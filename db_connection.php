@@ -29,7 +29,7 @@ class DB_CONNECT {
  
         // Selecing database
         $db = mysql_select_db(DB_DATABASE) or die(mysql_error()) or die(mysql_error());
- 
+        echo "connection!!";
         // returing connection cursor
         return $con;
     }
