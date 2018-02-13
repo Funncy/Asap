@@ -5,6 +5,7 @@
  * All product details are read from HTTP Post Request
  */
  
+    echo "hoi";
 
 
     // include db connect class
