@@ -29,5 +29,12 @@
     $SeatTable["SeatData"] = $result["SeatData"];
 
     echo json_encode($SeatTable);
+
+    $result = array();
+    $response["success"] = 0;
+    $response["message"] = "Required field(s) is missing";
+ 
+    // echoing JSON response
+    echo json_encode($response);
  
 ?>
