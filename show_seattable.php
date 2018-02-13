@@ -21,7 +21,7 @@
     $db = new DB_CONNECT();
  echo "start1";
 
-    echo $db;
+    //echo $db;
        // echoing JSON response
        echo "start2";
     // mysql inserting a new row
