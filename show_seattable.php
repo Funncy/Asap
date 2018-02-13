@@ -18,6 +18,10 @@
 //$result = mysql_query("INSERT INTO products(name, price, description) VALUES('$name', '$price', '$description')");
     $result = mysql_query("SELECT * FROM PcSeatTable WHERE ID = 1");
     
+    if(empty($result)){
+        echo "empty";
+    }
+
     $SeatTable = array();
     $SeatTable["row"] = $result["row"];
     $SeatTable["col"] = $result["col"];
