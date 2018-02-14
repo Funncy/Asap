@@ -5,7 +5,7 @@
  * All product details are read from HTTP Post Request
  */
  
-    echo "hoi";
+  
 
     $result = array();
     $response["success"] = 0;
@@ -25,14 +25,14 @@
     // mysql inserting a new row
 //$result = mysql_query("INSERT INTO products(name, price, description) VALUES('$name', '$price', '$description')");
     $result = mysql_query("SELECT * FROM PcSeatTable WHERE ID = 1");
-       
-    if(empty($result)){
-        echo "empty";
+    $SeatTable = array();
+    if(!empty($result)){
+        $SeatTable["Success"] = 1;
+    }else{
+        $SeatTable["Success"] = 0;
     }
 
     $result = mysql_fetch_array($result);
-
-    $SeatTable = array();
     $SeatTable["ID"] = $result["ID"];
     $SeatTable["PcRoomID"] = $result["PcRoomID"];
     $SeatTable["row"] = $result["row"];
