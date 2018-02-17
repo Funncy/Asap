@@ -29,7 +29,7 @@ for($i =0; $i<$result["row"]; $i++){
 <?php
 for($j=0; $j<$result["col"]; $j++){
 ?>
-<td style="<?php 
+<td  style="<?php 
 
 
 if($data[$i*$result["row"] + $j]=="0"){
@@ -42,7 +42,7 @@ if($data[$i*$result["row"] + $j]=="0"){
     echo "background: rgba(0, 100, 100, 0.5);";
 }
 
-?>">
+?>"><a href="SeatStateChange.php?row=<?php echo $i; ?>&col=<?php echo $j; ?>">
 <?php
 if($data[$i*$result["row"] + $j]=="0"){
     echo "   ";
@@ -54,7 +54,7 @@ if($data[$i*$result["row"] + $j]=="0"){
     echo "수리중";
 }
 
-?>
+?></a>
 </td>
 
 <?php
