@@ -22,13 +22,13 @@ $data = str_split($data);
 echo "data=";
 for($i=0; $i<$result["row"]; $i++){
     for($j=0; $j<$result["col"]; $j++){
-        echo $data[$i*$result["row"]+ $j];
+        //echo $data[$i*$result["row"]+ $j];
         if($data[$i*$result["row"]+ $j]=="1"){
             $data[$i*$result["row"]+ $j] = "2";
         }else if($data[$i*$result["row"]+ $j]=="2"){
             $data[$i*$result["row"]+ $j] = "1";
         }
-        echo $data[$i*$result["row"]+ $j];
+        //echo $data[$i*$result["row"]+ $j];
     }
 }
 echo "SEatData=";
