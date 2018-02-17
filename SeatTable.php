@@ -41,7 +41,7 @@ if($data[$i*$result["row"] + $j]=="0"){
     echo "background: rgba(0, 100, 100, 0.5);";
 }
 
-?>"><a href="SeatStateChange.php?row=<?php echo $i; ?>&col=<?php echo $j; ?>">
+?>"><a href="http://203.250.148.50/SeatStateChange.php?row=<?php echo $i; ?>&col=<?php echo $j; ?>">
 <?php
 if($data[$i*$result["row"] + $j]=="0"){
     echo "   ";

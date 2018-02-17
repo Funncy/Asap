@@ -35,6 +35,6 @@ $SeatData = implode($data);
 echo $SeatData;
 //UPDATE  `asap`.`PcSeatTable` SET  `PcRoomID` =  '2' WHERE  `PcSeatTable`.`ID` =1;
 mysql_query("UPDATE PcSeatTable SET SeatData = $SeatData  WHERE ID = 1");
-echo("<script>location.href='SeatTable.php/';</script>");
+echo("<script>location.href='http://203.250.148.50/SeatTable.php';</script>");
 
 ?>
