@@ -17,7 +17,7 @@ $result = mysql_query("SELECT * FROM PcSeatTable WHERE ID = 1");
 $result = mysql_fetch_array($result);
 $data = $result["SeatData"];
 
-$data = str_split($data);
+$data = explode($data);
 print_r($data);
 
 echo "data=";
@@ -27,9 +27,15 @@ for($i=0; $i<$result["row"]; $i++){
     for($j=0; $j<$result["col"]; $j++){
         //echo $data[$i*$result["row"]+ $j];
         if($data[$i*$result["row"]+ $j]=="1"){
+            echo $data[$i*$result["row"]+ $j];
+            echo "change!!";
             $data[$i*$result["row"]+ $j] = "2";
+            echo $data[$i*$result["row"]+ $j];
         }else if($data[$i*$result["row"]+ $j]=="2"){
+            echo $data[$i*$result["row"]+ $j];
+            echo "change!!";
             $data[$i*$result["row"]+ $j] = "1";
+            echo $data[$i*$result["row"]+ $j];
         }
         //echo $data[$i*$result["row"]+ $j];
     }
