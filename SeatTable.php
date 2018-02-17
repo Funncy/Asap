@@ -14,7 +14,6 @@ $data = $result["SeatData"];
 $data = str_split($data);
 
 
-
 ?>
 
 <html>
