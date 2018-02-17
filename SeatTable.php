@@ -20,7 +20,7 @@ $data = str_split($data);
 <html>
 <body>
 
-<table>
+<table border="1"> 
 <?php
 for($i =0; $i<$result["row"]; $i++){
 ?>
@@ -30,7 +30,7 @@ for($j=0; $j<$result["col"]; $j++){
 ?>
 <td>
 <?php
-echo $data[$i*row + $j];
+echo $data[$i*$result["row"] + $j];
 ?>
 </td>
 
