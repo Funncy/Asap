@@ -36,7 +36,9 @@ for($i=0; $i<$result["row"]; $i++){
 }
 echo "SEatData=";
 
+print_r($data);
 $SeatData = implode($data);
+
 echo $SeatData;
 
 
