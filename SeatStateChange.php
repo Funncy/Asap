@@ -18,8 +18,11 @@ $result = mysql_fetch_array($result);
 $data = $result["SeatData"];
 
 $data = str_split($data);
+print_r($data);
 
 echo "data=";
+echo $data[0];
+echo "dataaa=";
 for($i=0; $i<$result["row"]; $i++){
     for($j=0; $j<$result["col"]; $j++){
         //echo $data[$i*$result["row"]+ $j];
