@@ -40,6 +40,6 @@ print_r($data);
 $SeatData = implode($data);
 
 echo $SeatData;
-
-
+//UPDATE  `asap`.`PcSeatTable` SET  `PcRoomID` =  '2' WHERE  `PcSeatTable`.`ID` =1;
+mysql_query("UPDATE PcSeatTable SET SeatData = $SeatData  WHERE ID = 1");
 ?>
