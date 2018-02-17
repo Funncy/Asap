@@ -23,7 +23,7 @@ print_r($data);
 
         if($data[$row*$result["row"]+ $col]=="1"){
             $data[$row*$result["row"]+ $col] = "2";
-        }else if($data[$rowi*$result["row"]+ $col]=="2"){
+        }else if($data[$row*$result["row"]+ $col]=="2"){
             $data[$row*$result["row"]+ $col] = "1";
         }
 
