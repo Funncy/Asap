@@ -29,14 +29,17 @@ for($i =0; $i<$result["row"]; $i++){
 <?php
 for($j=0; $j<$result["col"]; $j++){
 ?>
-<td bgcolor="<?php 
+<td style="<?php 
+
+
 if($data[$i*$result["row"] + $j]=="0"){
+    echo "background: rgba(0, 0,0, 0)";
 }else if($data[$i*$result["row"] + $j]=="1"){
-    echo "#FFFFFF";
+    echo "background: rgba(100, 100, 100, 0.5);";
 }else if($data[$i*$result["row"] + $j]=="2"){
-    echo "#FFFF00";
+    echo "background: rgba(100, 0, 100, 0.5);";
 }else if($data[$i*$result["row"] + $j]=="3"){
-    echo "#FF00FF";
+    echo "background: rgba(0, 100, 100, 0.5);";
 }
 
 ?>>
