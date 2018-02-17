@@ -19,6 +19,7 @@ $data = $result["SeatData"];
 
 $data = str_split($data);
 
+echo "data=";
 for($i=0; $i<$result["row"]; $i++){
     for($j=0; $j<$result["col"]; $j++){
         echo $data[$i*$result["row"]+ $j];
@@ -30,6 +31,7 @@ for($i=0; $i<$result["row"]; $i++){
         echo $data[$i*$result["row"]+ $j];
     }
 }
+echo "SEatData=";
 
 $SeatData = implode($data);
 echo $SeatData;
