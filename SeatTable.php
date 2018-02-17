@@ -13,11 +13,36 @@ $data = $result["SeatData"];
 
 $data = str_split($data);
 
-for( $i =0; $i < $result["row"]; $i++){
-    for ($j =0; $j < $result["col"]; $j++){
-        echo $data[$i*row + $j];
-    }
-}
 
 
 ?>
+
+<html>
+<body>
+
+<table>
+<?php
+for($i =0; $i<$result["row"]; $i++){
+?>
+<tr>
+<?php
+for($j=0; $j<$result["col"]; $j++){}
+?>
+<td>
+<?php
+echo $data[$i*row + $j];
+?>
+</td>
+
+<?php
+}
+?>
+</tr>
+<?php
+}
+?>
+
+</table>
+
+</body>
+</html>
