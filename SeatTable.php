@@ -20,7 +20,7 @@ $data = str_split($data);
 <html>
 <body>
 
-<table border="1"> 
+<table border="0"> 
 <?php
 for($i =0; $i<$result["row"]; $i++){
 ?>
@@ -28,9 +28,29 @@ for($i =0; $i<$result["row"]; $i++){
 <?php
 for($j=0; $j<$result["col"]; $j++){
 ?>
-<td>
+<td bgcolor="<?php 
+if($data[$i*$result["row"] + $j]=="0"){
+    echo "   ";
+}else if($data[$i*$result["row"] + $j]=="1"){
+    echo "#FFFFFF";
+}else if($data[$i*$result["row"] + $j]=="2"){
+    echo "#FFFF00";
+}else if($data[$i*$result["row"] + $j]=="3"){
+    echo "#FF00FF";
+}
+
+?>>
 <?php
-echo $data[$i*$result["row"] + $j];
+if($data[$i*$result["row"] + $j]=="0"){
+    echo "   ";
+}else if($data[$i*$result["row"] + $j]=="1"){
+    echo "빈좌석";
+}else if($data[$i*$result["row"] + $j]=="2"){
+    echo "사용중";
+}else if($data[$i*$result["row"] + $j]=="3"){
+    echo "수리중";
+}
+
 ?>
 </td>
 
