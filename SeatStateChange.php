@@ -17,11 +17,14 @@ $result = mysql_query("SELECT * FROM PcSeatTable WHERE ID = 1");
 $result = mysql_fetch_array($result);
 $data = $result["SeatData"];
 
-$data = explode('',$data);
-print_r($data);
+for($i=0;$i<strlen($data);$i++) { 
+$str_cut[$i] = substr($data,$i,1); 
+} 
+//$data = explode('',$data);
+print_r($str_cut);
 
 echo "data=";
-echo $data[0];
+echo $str_cut[0];
 echo "dataaa=";
 for($i=0; $i<$result["row"]; $i++){
     for($j=0; $j<$result["col"]; $j++){
