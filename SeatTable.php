@@ -26,7 +26,7 @@ for($i =0; $i<$result["row"]; $i++){
 ?>
 <tr>
 <?php
-for($j=0; $j<$result["col"]; $j++){}
+for($j=0; $j<$result["col"]; $j++){
 ?>
 <td>
 <?php
