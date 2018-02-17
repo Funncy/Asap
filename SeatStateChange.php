@@ -17,32 +17,16 @@ $result = mysql_query("SELECT * FROM PcSeatTable WHERE ID = 1");
 $result = mysql_fetch_array($result);
 $data = $result["SeatData"];
 
-for($i=0;$i<strlen($data);$i++) { 
-$str_cut[$i] = substr($data,$i,1); 
-} 
-//$data = explode('',$data);
-print_r($str_cut);
+$data = str_split($data);
+print_r($data);
 
-echo "data=";
-echo $str_cut[0];
-echo "dataaa=";
-for($i=0; $i<$result["row"]; $i++){
-    for($j=0; $j<$result["col"]; $j++){
-        //echo $data[$i*$result["row"]+ $j];
-        if($data[$i*$result["row"]+ $j]=="1"){
-            echo $data[$i*$result["row"]+ $j];
-            echo "change!!";
-            $data[$i*$result["row"]+ $j] = "2";
-            echo $data[$i*$result["row"]+ $j];
-        }else if($data[$i*$result["row"]+ $j]=="2"){
-            echo $data[$i*$result["row"]+ $j];
-            echo "change!!";
-            $data[$i*$result["row"]+ $j] = "1";
-            echo $data[$i*$result["row"]+ $j];
+
+        if($data[$row*$result["row"]+ $col]=="1"){
+            $data[$rowi*$result["row"]+ $col] = "2";
+        }else if($data[$rowi*$result["row"]+ $col]=="2"){
+            $data[$row*$result["row"]+ $col] = "1";
         }
-        //echo $data[$i*$result["row"]+ $j];
-    }
-}
+
 echo "SEatData=";
 
 print_r($data);
