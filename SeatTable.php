@@ -33,7 +33,7 @@ for($j=0; $j<$result["col"]; $j++){
 
 
 if($data[$i*$result["row"] + $j]=="0"){
-    echo "background: rgba(0, 0,0, 0)";
+    echo "background: rgba(0, 0 ,0, 0)";
 }else if($data[$i*$result["row"] + $j]=="1"){
     echo "background: rgba(100, 100, 100, 0.5);";
 }else if($data[$i*$result["row"] + $j]=="2"){
@@ -42,7 +42,7 @@ if($data[$i*$result["row"] + $j]=="0"){
     echo "background: rgba(0, 100, 100, 0.5);";
 }
 
-?>>
+?>">
 <?php
 if($data[$i*$result["row"] + $j]=="0"){
     echo "   ";
