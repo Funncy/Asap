@@ -18,6 +18,7 @@ $data = str_split($data);
 ?>
 
 <html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <body>
 
 <table border="0"> 
@@ -30,7 +31,6 @@ for($j=0; $j<$result["col"]; $j++){
 ?>
 <td bgcolor="<?php 
 if($data[$i*$result["row"] + $j]=="0"){
-    echo "   ";
 }else if($data[$i*$result["row"] + $j]=="1"){
     echo "#FFFFFF";
 }else if($data[$i*$result["row"] + $j]=="2"){
