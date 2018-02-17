@@ -17,7 +17,7 @@ $result = mysql_query("SELECT * FROM PcSeatTable WHERE ID = 1");
 $result = mysql_fetch_array($result);
 $data = $result["SeatData"];
 
-$data = explode($data);
+$data = explode('',$data);
 print_r($data);
 
 echo "data=";
